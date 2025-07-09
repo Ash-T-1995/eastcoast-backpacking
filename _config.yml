@@ -22,8 +22,8 @@ title: Backpacking Australia’s East Coast
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   "Budget tips, itineraries & hostel reviews from Cairns to Melbourne."
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ash-t-1995.github.io/eastcoast-backpacking" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/eastcoast-backpacking" # the subpath of your site, e.g. /blog
+url: "https://ash-t-1995.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
