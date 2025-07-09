@@ -1,30 +1,45 @@
 <header class="site-header" role="banner">
-
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    {%- assign page_paths    = site.header_pages | default: default_paths -%}
+
+    <!-- your site title -->
+    <a class="site-title"
+       rel="author"
+       href="{{ "/" | relative_url }}">
+      {{ site.title | escape }}
+    </a>
+
+    <!-- ☰ hamburger toggle for mobile -->
+    <button class="menu-toggle"
+            aria-expanded="false"
+            aria-label="Open menu">
+      ☰
+    </button>
 
     {%- if page_paths -%}
-      <nav class="site-nav">
-  <ul class="top-menu">
-    {% for item in site.data.navigation %}
-      <li class="top-item">
-        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      <!-- nav is hidden by default -->
+      <nav class="site-nav" hidden>
+        <ul class="top-menu">
+          {% for item in site.data.navigation %}
+            <li class="top-item">
+              <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
 
-        {% if item.children %}
-          <ul class="dropdown">
-            {% for child in item.children %}
-              <li>
-                <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
+              {% if item.children %}
+                <ul class="dropdown">
+                  {% for child in item.children %}
+                    <li>
+                      <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
     {%- endif -%}
+
   </div>
 </header>
