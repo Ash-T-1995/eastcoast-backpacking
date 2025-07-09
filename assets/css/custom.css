@@ -1,0 +1,16 @@
+/* ---------- Dropdown nav (Minima override) ---------- */
+.top-menu        { list-style:none; margin:0; padding:0; }
+.top-item        { position:relative; display:inline-block; }
+.top-item > a    { display:block; padding:8px 12px; }
+
+.dropdown        {           /* hidden until hover */
+  display:none;  position:absolute; left:0; top:100%;
+  background:#fff; border:1px solid #e2e2e2;
+  list-style:none; margin:0; padding:4px 0; min-width:220px;
+  z-index:999;
+}
+.dropdown li a   { display:block; padding:6px 14px; color:#555; text-decoration:none; }
+.dropdown li a:hover { background:#f5f5f5; }
+
+.top-item:hover > .dropdown { display:block; }
+/* ---------------------------------------------------- */

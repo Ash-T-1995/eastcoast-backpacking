@@ -1,0 +1,8 @@
+# _data/navigation.yml
+- title: "Backpacker Jobs in Australia"
+  url:   /backpacker-jobs/
+  children:
+    - title: "88 Days Farm Work Guide"
+      url:   /backpacker-jobs/88-days-farm-work/
+- title: "About"
+  url:   /about/
